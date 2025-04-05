@@ -1,19 +1,21 @@
 import "./Product.css";
+import Price from "./Price";
 
-function Product({title,price,features, nArray,features2 }) {
-   // const List = features2.map((feature)=> <li>{feature}</li>) we can write this logic directly inside the component(return)
-  // let isDiscount = price > 30000 ? <p>Discount 5%</p>: ""; // we can directly use this link inside the component(return(where we call directly))
-  let isDiscount = price > 30000;
-  let styles = {backgroundColor: isDiscount ? "pink":""};
+function Product({title,idx }) {
+    let oldPrice = ["12,495", "11,990", "1,599","599"];
+    let newPrice = ["8,999", "9,199", "899", "278"];
+    let description = [
+           [ "8,000 DPI", "5 Programmable buttons"],
+            ["intutive surface","designed for iPad pro"],
+            ["designed for iPad pro","intutive surface"],
+            ["Wireless","8,000 DPI"],
+    ];
     return (
-        <div className="Product" style={styles}>
-            <h3>{title}</h3>
-            <h5>Price : {price}</h5>
-            <p>{features}</p>
-            <p>{features2.map((feature)=> 
-                (<li>{feature}</li>))}</p>
-            <p>{nArray}</p>
-            <p>{ isDiscount ? <a href="/">Discount 5%</a> : null}</p>
+        <div className="Product"> 
+           <h4>{title}</h4>
+           <p>{description[idx][0]}</p>
+           <p>{description[idx][1]}</p>
+           <Price oldPrice={oldPrice[idx]} newPrice={newPrice[idx]}/>
         </div>
     );
 }

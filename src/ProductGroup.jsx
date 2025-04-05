@@ -1,17 +1,20 @@
 import Product from "./Product.jsx";
 // Structure component
 function ProductGroup() {
-    let option = ["hi-tech","durable","fast"];
-
-    let nList = ["ArrayRendering","MapFunction","UsedConst"];
-     let nFeature = [<li>hitech</li>,<li>durable</li>]
-    //let option2 = {a:"nHitech", b:"nDurable", c:"nFast"};
+    let styles = {
+       display:"flex",
+       flexWrap: "wrap", 
+       justifyContent: "center",
+       alignItems: "center"
+    };
     return (
-        <>
-        <Product title="phone" price={30000} features={option} nArray={nFeature} features2={nList}/>
-        <Product title="laptop" price={40000}  features={option} nArray={nFeature} features2={nList}/>
-        <Product title="pen" price={10}  features={option} nArray={nFeature} features2={nList} />
-     </>
+        <div style={styles}>
+           
+        <Product  title="Logitech Mx Master"idx={0}/>
+        <Product title="Apple Pencil (2nd Gen)"idx={1}/>
+        <Product title="Zebronics Zeb-transformer" idx={2} />
+        <Product title="Petronics Toad 23" idx={3}/>
+     </div>
     );
 }
 export default ProductGroup;

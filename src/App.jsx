@@ -1,10 +1,10 @@
 
 import './App.css'
 // import {Title,Sum} from "./Title.jsx";
-import Title from "./Title.jsx";
-import Description from "./Description.jsx";
+
+
 import ProductGroup from "./ProductGroup.jsx";
-import MsgBox from "./MsgBox.jsx";
+
 // our 1st component in react
 // component is a reusable & independent piece of code
 
@@ -23,17 +23,13 @@ import MsgBox from "./MsgBox.jsx";
 // <></> -> react fragment -> multiple component and multiple children combine into a single entity 
 // if we dont want to add extra node then we can use the react fragment
 //===================================
-let arr = ["first", "second"];
+// let arr = ["first", "second"];
 function App() {
   return(
     <>
-    <MsgBox UserName="Ranjan" textColor="yellow" nar={arr}/>
-    <MsgBox UserName="Raudy" textColor="green" nar={arr}/>
+    <h2>BlockBuster Deals | Shop Now</h2>
       <ProductGroup/>
-       <Title/> 
-       <Description/>
-       <Title/>
-       <Description/>
+      
     </>
   );
   
