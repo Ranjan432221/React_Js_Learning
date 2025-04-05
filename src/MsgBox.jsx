@@ -1,4 +1,4 @@
-
+// this is the msg box where i import it into App.jsx
 function MsgBox({UserName,textColor,nar}) {
    let clr = {color:textColor};
     let clrr = {backgroundColor:UserName === "Ranjan" ? "blue": "" };
